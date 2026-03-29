@@ -1,0 +1,41 @@
+数据库内容
+//创建用户表
+CREATE TABLE Users(
+  userId int primary key auto_increment,
+  userName varchar(50),
+  password varchar(50),
+  sex char(1),
+  email varchar(50),
+  role varchar(20)
+);
+//创建问题表
+CREATE TABLE question(
+  questionId int primary key auto_increment,
+  title varchar(100),
+  optionA varchar(50),
+  optionB varchar(50),
+  optionC varchar(50),
+  optionD varchar(50),
+  answer char(1)
+);
+//管理员信息
+INSERT INTO Users VALUES
+(654321,'Carrd','123456','男','admin@qq.com','admin');
+INSERT INTO Users VALUES
+(654322,'student','123456','男','student@qq.com','user');
+//问题
+INSERT INTO question VALUES
+(NULL,'2+2=?','2','3','4','5','C');
+INSERT INTO question VALUES
+(NULL,'10-8=?','9','1','2','0','C');
+INSERT INTO question VALUES
+(NULL,'5-3=?','1','2','3','4','B');
+INSERT INTO question VALUES
+(NULL,'7-2=?','3','4','5','6','C');
+INSERT INTO question VALUES
+(NULL,'6/2=?','2','3','4','5','B');
+
+管理员账号：Carrd
+管理员密码：123456
+用户账号：student
+用户密码：123456
